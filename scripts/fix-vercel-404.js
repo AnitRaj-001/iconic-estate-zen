@@ -1,7 +1,8 @@
 import fs from 'fs';
 import path from 'path';
 
-const clientDir = path.join(process.cwd(), 'dist', 'client');
+const distDir = path.join(process.cwd(), 'dist');
+const clientDir = path.join(distDir, 'client');
 const assetsDir = path.join(clientDir, 'assets');
 
 if (!fs.existsSync(clientDir)) {
@@ -32,5 +33,17 @@ const htmlContent = `<!DOCTYPE html>
   </body>
 </html>`;
 
-fs.writeFileSync(path.join(clientDir, 'index.html'), htmlContent);
-console.log('Successfully generated dist/client/index.html with:', { jsFile, cssFile });
+// Write index.html to dist/
+fs.writeFileSync(path.join(distDir, 'index.html'), htmlContent);
+
+// Move assets from dist/client/assets to dist/assets
+const targetAssetsDir = path.join(distDir, 'assets');
+if (!fs.existsSync(targetAssetsDir)) {
+  fs.mkdirSync(targetAssetsDir);
+}
+
+files.forEach(f => {
+  fs.copyFileSync(path.join(assetsDir, f), path.join(targetAssetsDir, f));
+});
+
+console.log('Successfully consolidated build output to dist/ with:', { jsFile, cssFile });
