@@ -56,42 +56,56 @@ export function Contact() {
 
             <div className="mt-10 flex flex-col gap-4">
               <a
-                href="tel:+919999999999"
+                href="tel:+919297882030"
+                id="contact-call"
                 className="group flex items-center gap-4 rounded-2xl border border-border/40 bg-card p-5 transition-all hover:border-gold"
               >
-                <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-gold text-primary-foreground"><Phone className="h-5 w-5" /></span>
+                <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-gold text-primary-foreground">
+                  <Phone className="h-5 w-5" />
+                </span>
                 <div>
                   <div className="text-xs uppercase tracking-[0.22em] text-muted-foreground">Call us</div>
-                  <div className="text-base font-medium text-foreground">+91 99999 99999</div>
+                  <div className="text-base font-medium text-foreground">+91 92978 82030</div>
                 </div>
               </a>
+
               <a
-                href="https://wa.me/919999999999?text=Hello%20DhruvIconic%2C%20I%27d%20like%20to%20know%20more"
+                href="https://wa.me/919297882030?text=Hello%20DhruvIconic%2C%20I%27d%20like%20to%20know%20more"
                 target="_blank"
                 rel="noreferrer"
+                id="contact-whatsapp"
                 className="group flex items-center gap-4 rounded-2xl border border-border/40 bg-card p-5 transition-all hover:border-gold"
               >
-                <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-gold text-primary-foreground"><MessageCircle className="h-5 w-5" /></span>
+                <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-gold text-primary-foreground">
+                  <MessageCircle className="h-5 w-5" />
+                </span>
                 <div>
                   <div className="text-xs uppercase tracking-[0.22em] text-muted-foreground">WhatsApp</div>
                   <div className="text-base font-medium text-foreground">Chat with our team</div>
                 </div>
               </a>
+
               <a
                 href="mailto:info@dhruv-iconic.com"
+                id="contact-email"
                 className="group flex items-center gap-4 rounded-2xl border border-border/40 bg-card p-5 transition-all hover:border-gold"
               >
-                <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-gold text-primary-foreground"><Mail className="h-5 w-5" /></span>
+                <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-gold text-primary-foreground">
+                  <Mail className="h-5 w-5" />
+                </span>
                 <div>
                   <div className="text-xs uppercase tracking-[0.22em] text-muted-foreground">Email</div>
                   <div className="text-base font-medium text-foreground">info@dhruv-iconic.com</div>
                 </div>
               </a>
+
               <div className="flex items-center gap-4 rounded-2xl border border-border/40 bg-card p-5">
-                <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-gold text-primary-foreground"><MapPin className="h-5 w-5" /></span>
+                <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-gold text-primary-foreground">
+                  <MapPin className="h-5 w-5" />
+                </span>
                 <div>
-                  <div className="text-xs uppercase tracking-[0.22em] text-muted-foreground">Office</div>
-                  <div className="text-base font-medium text-foreground">Patna, Bihar 800001</div>
+                  <div className="text-xs uppercase tracking-[0.22em] text-muted-foreground">Headquarters</div>
+                  <div className="text-base font-medium text-foreground">R.P Center, RPS More, Bailey Road, Patna</div>
                 </div>
               </div>
             </div>
@@ -137,14 +151,13 @@ export function Contact() {
                 />
               </div>
 
-              {error && (
-                <p className="text-sm text-destructive">{error}</p>
-              )}
+              {error && <p className="text-sm text-destructive">{error}</p>}
               {status === "sent" && (
                 <p className="text-sm text-gold">Thank you — we'll be in touch shortly.</p>
               )}
 
               <button
+                id="contact-submit"
                 disabled={status === "sending"}
                 className="group mt-2 inline-flex items-center justify-center gap-3 rounded-full bg-gradient-gold px-7 py-4 text-sm font-semibold text-primary-foreground shadow-gold transition-transform duration-300 hover:scale-[1.03] disabled:opacity-70"
               >

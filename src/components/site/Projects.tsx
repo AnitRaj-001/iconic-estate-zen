@@ -1,41 +1,8 @@
 import { motion } from "framer-motion";
 import { ArrowUpRight, MapPin } from "lucide-react";
-import iconCity from "@/assets/properties/icon-city.jpg";
-import iconResidency from "@/assets/properties/icon-residency.jpg";
-import iconVillage from "@/assets/properties/icon-village.jpg";
-import iconResidency2 from "@/assets/properties/icon-residency-2.jpg";
+import { Link } from "@tanstack/react-router";
+import { projects } from "@/data/projects";
 import { SectionHeading } from "./SectionHeading";
-
-const projects = [
-  {
-    name: "Icon City",
-    location: "Naubatpur, Patna",
-    image: iconCity,
-    tags: ["Sarmera‑Bihta Highway", "Planned Society", "5 ft Boundary Wall", "24×7 Security"],
-    status: "Now Selling",
-  },
-  {
-    name: "Icon Residency",
-    location: "Bihta, Patna",
-    image: iconResidency,
-    tags: ["Plot Demarcation", "Drainage System", "Bank Loan Available", "24×7 Security"],
-    status: "RERA Approved",
-  },
-  {
-    name: "Icon Village",
-    location: "Maner, Patna",
-    image: iconVillage,
-    tags: ["Bihar's Biggest Township", "Registry on 25%", "Modern Amenities", "0% EMI Plans"],
-    status: "Flagship Project",
-  },
-  {
-    name: "Icon Garden City",
-    location: "Chirora, Bihta",
-    image: iconResidency2,
-    tags: ["Completed 2021", "15 Bigha", "Gated Community", "Premium Plots"],
-    status: "Delivered",
-  },
-];
 
 export function Projects() {
   return (
@@ -60,7 +27,7 @@ export function Projects() {
             >
               <div className="relative aspect-[16/11] overflow-hidden">
                 <img
-                  src={p.image}
+                  src={p.images[0]}
                   alt={`${p.name}, ${p.location}`}
                   className="h-full w-full object-cover transition-transform duration-[1.4s] ease-out group-hover:scale-110"
                   loading="lazy"
@@ -79,7 +46,7 @@ export function Projects() {
               </div>
               <div className="flex flex-col gap-5 p-6">
                 <div className="flex flex-wrap gap-2">
-                  {p.tags.map((t) => (
+                  {p.highlights.slice(0, 4).map((t) => (
                     <span
                       key={t}
                       className="rounded-full border border-border/50 bg-secondary/40 px-3 py-1 text-[11px] text-foreground/75"
@@ -88,15 +55,17 @@ export function Projects() {
                     </span>
                   ))}
                 </div>
-                <a
-                  href="#contact"
+                <Link
+                  to="/projects/$slug"
+                  params={{ slug: p.slug }}
+                  id={`view-project-${p.slug}`}
                   className="group/link flex items-center justify-between rounded-xl bg-secondary/60 px-5 py-4 transition-colors hover:bg-secondary"
                 >
-                  <span className="text-sm font-semibold text-foreground">Enquire about {p.name}</span>
+                  <span className="text-sm font-semibold text-foreground">View {p.name}</span>
                   <span className="flex h-9 w-9 items-center justify-center rounded-full bg-gradient-gold text-primary-foreground transition-transform duration-500 group-hover/link:rotate-45">
                     <ArrowUpRight className="h-4 w-4" />
                   </span>
-                </a>
+                </Link>
               </div>
             </motion.article>
           ))}

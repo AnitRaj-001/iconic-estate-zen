@@ -1,15 +1,17 @@
 import { useEffect, useState } from "react";
 import { Menu, X, Phone } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import { Link } from "@tanstack/react-router";
+import { Logo } from "./Logo";
 
 const links = [
-  { href: "#home", label: "Home" },
-  { href: "#about", label: "About" },
-  { href: "#projects", label: "Projects" },
-  { href: "#gallery", label: "Gallery" },
-  { href: "#services", label: "Services" },
-  { href: "#testimonials", label: "Reviews" },
-  { href: "#contact", label: "Contact" },
+  { href: "/#home", label: "Home" },
+  { href: "/#about", label: "About" },
+  { href: "/#projects", label: "Projects" },
+  { href: "/#gallery", label: "Gallery" },
+  { href: "/#services", label: "Services" },
+  { href: "/#testimonials", label: "Reviews" },
+  { href: "/#contact", label: "Contact" },
 ];
 
 export function Navbar() {
@@ -33,17 +35,9 @@ export function Navbar() {
       }`}
     >
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 lg:px-10">
-        <a href="#home" className="flex items-center gap-3 group">
-          <div className="relative h-10 w-10 rounded-full bg-gradient-gold p-[1.5px] transition-transform duration-500 group-hover:rotate-12">
-            <div className="flex h-full w-full items-center justify-center rounded-full bg-ink">
-              <span className="font-display text-xl font-semibold text-gold">D</span>
-            </div>
-          </div>
-          <div className="leading-none">
-            <div className="font-display text-lg tracking-wide text-foreground">DhruvIconic</div>
-            <div className="text-[10px] uppercase tracking-[0.32em] text-gold">Pvt. Ltd.</div>
-          </div>
-        </a>
+        <Link to="/" className="flex items-center gap-3 group">
+          <Logo className="h-10 w-auto" />
+        </Link>
 
         <ul className="hidden items-center gap-8 lg:flex">
           {links.map((l) => (
@@ -60,13 +54,13 @@ export function Navbar() {
 
         <div className="hidden items-center gap-3 lg:flex">
           <a
-            href="tel:+919999999999"
+            href="tel:+919297882030"
             className="flex items-center gap-2 text-sm text-foreground/80 hover:text-gold transition-colors"
           >
-            <Phone className="h-4 w-4" /> +91 99999 99999
+            <Phone className="h-4 w-4" /> +91 92978 82030
           </a>
           <a
-            href="#contact"
+            href="/#contact"
             className="rounded-full bg-gradient-gold px-5 py-2.5 text-sm font-semibold text-primary-foreground shadow-gold transition-transform duration-300 hover:scale-[1.04]"
           >
             Book Site Visit
@@ -105,7 +99,7 @@ export function Navbar() {
               ))}
               <li className="mt-3">
                 <a
-                  href="#contact"
+                  href="/#contact"
                   onClick={() => setOpen(false)}
                   className="block rounded-full bg-gradient-gold px-5 py-3 text-center text-sm font-semibold text-primary-foreground shadow-gold"
                 >

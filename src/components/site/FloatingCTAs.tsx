@@ -4,7 +4,7 @@ export function FloatingCTAs() {
   return (
     <div className="fixed bottom-5 right-5 z-40 flex flex-col gap-3 sm:bottom-7 sm:right-7">
       <a
-        href="https://wa.me/919999999999?text=Hello%20DhruvIconic"
+        href="https://wa.me/919297882030?text=Hello%20DhruvIconic"
         target="_blank"
         rel="noreferrer"
         aria-label="Chat on WhatsApp"
@@ -14,7 +14,7 @@ export function FloatingCTAs() {
         <MessageCircle className="relative h-6 w-6" />
       </a>
       <a
-        href="tel:+919999999999"
+        href="tel:+919297882030"
         aria-label="Call DhruvIconic"
         className="flex h-14 w-14 items-center justify-center rounded-full bg-gradient-gold text-primary-foreground shadow-gold transition-transform duration-300 hover:scale-110"
       >

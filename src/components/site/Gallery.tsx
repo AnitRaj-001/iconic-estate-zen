@@ -11,20 +11,20 @@ import statsBg from "@/assets/properties/stats-bg.jpg";
 import delivered from "@/assets/properties/delivered-1.jpg";
 import { SectionHeading } from "./SectionHeading";
 
-type Item = { src: string; alt: string; category: "All" | "Township" | "Plots" | "Amenities" };
+type Item = { src: string; alt: string; category: "All" | "Icon City" | "Icon Residency" | "Icon Village" | "Team" };
 
 const items: Item[] = [
-  { src: iconCity, alt: "Icon City township", category: "Township" },
-  { src: iconResidency, alt: "Icon Residency view", category: "Township" },
-  { src: iconVillage, alt: "Icon Village landscape", category: "Township" },
-  { src: about1, alt: "DhruvIconic premium plot", category: "Plots" },
-  { src: statsBg, alt: "Aerial view of project", category: "Amenities" },
-  { src: iconResidency2, alt: "Icon Residency facade", category: "Plots" },
-  { src: iconVillage2, alt: "Icon Village amenities", category: "Amenities" },
-  { src: delivered, alt: "Delivered DhruvIconic project", category: "Township" },
+  { src: iconCity, alt: "Icon City - Modern Gated Society in Patna", category: "Icon City" },
+  { src: iconResidency, alt: "Icon Residency - Luxury Plots in Bihta", category: "Icon Residency" },
+  { src: iconVillage, alt: "Icon Village - Biggest Township in Maner", category: "Icon Village" },
+  { src: about1, alt: "Our Professional Real Estate Team", category: "Team" },
+  { src: statsBg, alt: "Aerial Development View - Icon City", category: "Icon City" },
+  { src: iconResidency2, alt: "Infrastructure Development at Icon Residency", category: "Icon Residency" },
+  { src: iconVillage2, alt: "Community Space at Icon Village", category: "Icon Village" },
+  { src: delivered, alt: "Anita Singh - Managing Director", category: "Team" },
 ];
 
-const filters: Item["category"][] = ["All", "Township", "Plots", "Amenities"];
+const filters: Item["category"][] = ["All", "Icon City", "Icon Residency", "Icon Village", "Team"];
 
 // Masonry-friendly heights
 const heights = ["row-span-1", "row-span-2", "row-span-1", "row-span-1", "row-span-2", "row-span-1", "row-span-1", "row-span-1"];

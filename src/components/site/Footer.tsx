@@ -1,75 +1,140 @@
-import { Facebook, Instagram, Youtube, Send } from "lucide-react";
+import { Facebook, Instagram, Youtube, Send, Phone, Mail, MapPin } from "lucide-react";
+import { Link } from "@tanstack/react-router";
+import { projects } from "@/data/projects";
+import { Logo } from "./Logo";
 
-const cols = [
-  {
-    title: "Projects",
-    links: ["Icon City", "Icon Residency", "Icon Village", "Icon Garden City"],
-  },
-  {
-    title: "Company",
-    links: ["About Us", "Why Choose Us", "Testimonials", "Contact"],
-  },
-  {
-    title: "Resources",
-    links: ["RERA Info", "Bank Loans", "Site Visits", "Blog"],
-  },
+const companyLinks = [
+  { label: "About Us", href: "/#about" },
+  { label: "Why Choose Us", href: "/#services" },
+  { label: "Testimonials", href: "/#testimonials" },
+  { label: "Contact", href: "/#contact" },
+];
+
+const resourceLinks = [
+  { label: "RERA Info", href: "/#contact" },
+  { label: "Bank Loans", href: "/#contact" },
+  { label: "Site Visits", href: "/#contact" },
 ];
 
 export function Footer() {
   return (
     <footer className="relative bg-secondary/40 pt-20">
       <div className="luxe-divider mx-auto max-w-7xl" />
-      <div className="mx-auto grid max-w-7xl gap-12 px-6 py-16 lg:grid-cols-[1.4fr_2fr_1.4fr] lg:px-10">
+      <div className="mx-auto grid max-w-7xl gap-12 px-6 py-16 lg:grid-cols-[1.6fr_2fr_1.4fr] lg:px-10">
+
+        {/* Brand Column */}
         <div>
-          <div className="flex items-center gap-3">
-            <div className="h-10 w-10 rounded-full bg-gradient-gold p-[1.5px]">
-              <div className="flex h-full w-full items-center justify-center rounded-full bg-ink">
-                <span className="font-display text-xl text-gold">D</span>
-              </div>
-            </div>
-            <div className="leading-none">
-              <div className="font-display text-lg text-foreground">DhruvIconic</div>
-              <div className="text-[10px] uppercase tracking-[0.32em] text-gold">Pvt. Ltd.</div>
-            </div>
-          </div>
-          <p className="mt-6 max-w-sm text-sm leading-relaxed text-muted-foreground">
+          <Link to="/" className="inline-block mb-6">
+            <Logo className="h-12 w-auto" />
+          </Link>
+          <p className="max-w-sm text-sm leading-relaxed text-muted-foreground">
             Patna's leading luxury real estate brand crafting RERA‑approved townships
-            for over two decades.
+            for over two decades. Where dreams meet opportunity.
           </p>
+
+          {/* Contact Info */}
+          <div className="mt-6 flex flex-col gap-2 text-sm text-muted-foreground">
+            <a
+              href="tel:+919297882030"
+              className="flex items-center gap-2 hover:text-gold transition-colors"
+            >
+              <Phone className="h-3.5 w-3.5 text-gold" />
+              +91 92978 82030
+            </a>
+            <a
+              href="mailto:info@dhruv-iconic.com"
+              className="flex items-center gap-2 hover:text-gold transition-colors"
+            >
+              <Mail className="h-3.5 w-3.5 text-gold" />
+              info@dhruv-iconic.com
+            </a>
+            <div className="flex items-center gap-2">
+              <MapPin className="h-3.5 w-3.5 text-gold" />
+              R.P Center, RPS More, Bailey Road, Patna
+            </div>
+          </div>
+
+          {/* Social Links */}
           <div className="mt-6 flex items-center gap-3">
-            {[Facebook, Instagram, Youtube].map((Icon, i) => (
-              <a
-                key={i}
-                href="#"
-                aria-label="Social link"
-                className="flex h-10 w-10 items-center justify-center rounded-full border border-border/60 text-foreground/70 transition-all hover:border-gold hover:text-gold"
-              >
-                <Icon className="h-4 w-4" />
-              </a>
-            ))}
+            <a
+              href="https://www.facebook.com/dhruviconicpatna/"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="DhruvIconic on Facebook"
+              className="flex h-10 w-10 items-center justify-center rounded-full border border-border/60 text-foreground/70 transition-all hover:border-gold hover:text-gold"
+            >
+              <Facebook className="h-4 w-4" />
+            </a>
+            <a
+              href="#"
+              aria-label="DhruvIconic on Instagram"
+              className="flex h-10 w-10 items-center justify-center rounded-full border border-border/60 text-foreground/70 transition-all hover:border-gold hover:text-gold"
+            >
+              <Instagram className="h-4 w-4" />
+            </a>
+            <a
+              href="#"
+              aria-label="DhruvIconic on YouTube"
+              className="flex h-10 w-10 items-center justify-center rounded-full border border-border/60 text-foreground/70 transition-all hover:border-gold hover:text-gold"
+            >
+              <Youtube className="h-4 w-4" />
+            </a>
           </div>
         </div>
 
+        {/* Links Grid */}
         <div className="grid grid-cols-2 gap-10 sm:grid-cols-3">
-          {cols.map((c) => (
-            <div key={c.title}>
-              <div className="text-xs uppercase tracking-[0.22em] text-gold">{c.title}</div>
-              <ul className="mt-5 flex flex-col gap-3">
-                {c.links.map((l) => (
-                  <li key={l}>
-                    <a href="#" className="text-sm text-foreground/75 hover:text-foreground gold-underline">
-                      {l}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
+          {/* Projects */}
+          <div>
+            <div className="text-xs uppercase tracking-[0.22em] text-gold mb-5">Projects</div>
+            <ul className="flex flex-col gap-3">
+              {projects.map((p) => (
+                <li key={p.slug}>
+                  <Link
+                    to="/projects/$slug"
+                    params={{ slug: p.slug }}
+                    className="text-sm text-foreground/75 hover:text-foreground gold-underline"
+                  >
+                    {p.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Company */}
+          <div>
+            <div className="text-xs uppercase tracking-[0.22em] text-gold mb-5">Company</div>
+            <ul className="flex flex-col gap-3">
+              {companyLinks.map((l) => (
+                <li key={l.label}>
+                  <a href={l.href} className="text-sm text-foreground/75 hover:text-foreground gold-underline">
+                    {l.label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Resources */}
+          <div>
+            <div className="text-xs uppercase tracking-[0.22em] text-gold mb-5">Resources</div>
+            <ul className="flex flex-col gap-3">
+              {resourceLinks.map((l) => (
+                <li key={l.label}>
+                  <a href={l.href} className="text-sm text-foreground/75 hover:text-foreground gold-underline">
+                    {l.label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
 
+        {/* Newsletter */}
         <div>
-          <div className="text-xs uppercase tracking-[0.22em] text-gold">Newsletter</div>
-          <p className="mt-5 text-sm text-muted-foreground">
+          <div className="text-xs uppercase tracking-[0.22em] text-gold mb-5">Newsletter</div>
+          <p className="text-sm text-muted-foreground">
             Receive curated property launches and investment insights.
           </p>
           <form
@@ -90,6 +155,16 @@ export function Footer() {
               <Send className="h-4 w-4" />
             </button>
           </form>
+
+          {/* WhatsApp CTA */}
+          <a
+            href="https://wa.me/919297882030?text=Hello%20DhruvIconic%2C%20I%27d%20like%20to%20know%20more"
+            target="_blank"
+            rel="noreferrer"
+            className="mt-5 flex items-center justify-center gap-2 rounded-full border border-[#25D366]/50 bg-[#25D366]/10 px-5 py-3 text-sm font-medium text-[#25D366] transition-all hover:bg-[#25D366]/20"
+          >
+            Chat on WhatsApp
+          </a>
         </div>
       </div>
 
