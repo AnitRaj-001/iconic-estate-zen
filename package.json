@@ -8,7 +8,7 @@
     "build": "vite build",
     "build:dev": "vite build --mode development",
     "preview": "vite preview",
-    "postbuild": "cp dist/server/index.js dist/server/server.js",
+    "postbuild": "cp dist/server/index.js dist/server/server.js && node scripts/fix-vercel-404.js",
     "lint": "eslint .",
     "format": "prettier --write ."
   },
