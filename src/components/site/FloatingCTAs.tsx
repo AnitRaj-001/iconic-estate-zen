@@ -16,7 +16,7 @@ export function FloatingCTAs() {
       <a
         href="tel:+919297882030"
         aria-label="Call DhruvIconic"
-        className="flex h-14 w-14 items-center justify-center rounded-full bg-gradient-gold text-primary-foreground shadow-gold transition-transform duration-300 hover:scale-110"
+        className="flex h-14 w-14 items-center justify-center rounded-full bg-gradient-blue text-primary-foreground shadow-elegant transition-transform duration-300 hover:scale-110"
       >
         <Phone className="h-5 w-5" />
       </a>

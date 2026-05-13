@@ -32,7 +32,7 @@ export function Projects() {
                   className="h-full w-full object-cover transition-transform duration-[1.4s] ease-out group-hover:scale-110"
                   loading="lazy"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/30 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-white via-white/10 to-transparent" />
                 <div className="absolute left-5 top-5 rounded-full glass px-3 py-1 text-[10px] uppercase tracking-[0.2em] text-gold">
                   {p.status}
                 </div>
@@ -62,7 +62,7 @@ export function Projects() {
                   className="group/link flex items-center justify-between rounded-xl bg-secondary/60 px-5 py-4 transition-colors hover:bg-secondary"
                 >
                   <span className="text-sm font-semibold text-foreground">View {p.name}</span>
-                  <span className="flex h-9 w-9 items-center justify-center rounded-full bg-gradient-gold text-primary-foreground transition-transform duration-500 group-hover/link:rotate-45">
+                  <span className="flex h-9 w-9 items-center justify-center rounded-full bg-gradient-blue text-primary-foreground transition-transform duration-500 group-hover/link:rotate-45">
                     <ArrowUpRight className="h-4 w-4" />
                   </span>
                 </Link>

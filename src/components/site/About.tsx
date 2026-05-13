@@ -39,7 +39,7 @@ export function About() {
               loading="lazy"
             />
           </div>
-          <div className="absolute -left-4 top-8 hidden rounded-2xl bg-gradient-gold px-6 py-5 text-primary-foreground shadow-gold md:block animate-float">
+          <div className="absolute -left-4 top-8 hidden rounded-2xl bg-gradient-blue px-6 py-5 text-primary-foreground shadow-elegant md:block animate-float">
             <div className="font-display text-3xl leading-none">20+</div>
             <div className="mt-1 text-[10px] uppercase tracking-[0.25em]">Years of Trust</div>
           </div>
@@ -64,7 +64,7 @@ export function About() {
                 transition={{ duration: 0.5, delay: i * 0.08 }}
                 className="flex items-center gap-3 rounded-lg border border-border/40 bg-card/50 px-4 py-3"
               >
-                <CheckCircle2 className="h-5 w-5 shrink-0 text-gold" />
+                 <CheckCircle2 className="h-5 w-5 shrink-0" style={{ color: "var(--brand-blue)" }} />
                 <span className="text-sm text-foreground/85">{h}</span>
               </motion.li>
             ))}
@@ -73,13 +73,13 @@ export function About() {
           <div className="mt-10 flex flex-wrap gap-4">
             <a
               href="#projects"
-              className="rounded-full bg-foreground px-7 py-3.5 text-sm font-semibold text-background transition-transform duration-300 hover:scale-[1.04]"
+              className="rounded-full bg-primary px-7 py-3.5 text-sm font-semibold text-primary-foreground transition-transform duration-300 hover:scale-[1.04]"
             >
               View Projects
             </a>
             <a
               href="#contact"
-              className="rounded-full border border-border/60 px-7 py-3.5 text-sm font-semibold text-foreground/90 transition-all duration-300 hover:border-gold hover:text-gold"
+              className="rounded-full border border-border px-7 py-3.5 text-sm font-semibold text-foreground/90 transition-all duration-300 hover:border-primary hover:text-primary"
             >
               Get Free Consultancy
             </a>

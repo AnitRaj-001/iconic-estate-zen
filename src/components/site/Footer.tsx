@@ -36,20 +36,20 @@ export function Footer() {
           <div className="mt-6 flex flex-col gap-2 text-sm text-muted-foreground">
             <a
               href="tel:+919297882030"
-              className="flex items-center gap-2 hover:text-gold transition-colors"
+              className="flex items-center gap-2 hover:text-primary transition-colors"
             >
-              <Phone className="h-3.5 w-3.5 text-gold" />
+              <Phone className="h-3.5 w-3.5" style={{ color: "var(--brand-blue)" }} />
               +91 92978 82030
             </a>
             <a
               href="mailto:info@dhruv-iconic.com"
-              className="flex items-center gap-2 hover:text-gold transition-colors"
+              className="flex items-center gap-2 hover:text-primary transition-colors"
             >
-              <Mail className="h-3.5 w-3.5 text-gold" />
+              <Mail className="h-3.5 w-3.5" style={{ color: "var(--brand-blue)" }} />
               info@dhruv-iconic.com
             </a>
             <div className="flex items-center gap-2">
-              <MapPin className="h-3.5 w-3.5 text-gold" />
+              <MapPin className="h-3.5 w-3.5" style={{ color: "var(--brand-blue)" }} />
               R.P Center, RPS More, Bailey Road, Patna
             </div>
           </div>
@@ -61,21 +61,21 @@ export function Footer() {
               target="_blank"
               rel="noreferrer"
               aria-label="DhruvIconic on Facebook"
-              className="flex h-10 w-10 items-center justify-center rounded-full border border-border/60 text-foreground/70 transition-all hover:border-gold hover:text-gold"
+              className="flex h-10 w-10 items-center justify-center rounded-full border border-border/60 text-foreground/70 transition-all hover:border-primary hover:text-primary"
             >
               <Facebook className="h-4 w-4" />
             </a>
             <a
               href="#"
               aria-label="DhruvIconic on Instagram"
-              className="flex h-10 w-10 items-center justify-center rounded-full border border-border/60 text-foreground/70 transition-all hover:border-gold hover:text-gold"
+              className="flex h-10 w-10 items-center justify-center rounded-full border border-border/60 text-foreground/70 transition-all hover:border-primary hover:text-primary"
             >
               <Instagram className="h-4 w-4" />
             </a>
             <a
               href="#"
               aria-label="DhruvIconic on YouTube"
-              className="flex h-10 w-10 items-center justify-center rounded-full border border-border/60 text-foreground/70 transition-all hover:border-gold hover:text-gold"
+              className="flex h-10 w-10 items-center justify-center rounded-full border border-border/60 text-foreground/70 transition-all hover:border-primary hover:text-primary"
             >
               <Youtube className="h-4 w-4" />
             </a>
@@ -86,7 +86,7 @@ export function Footer() {
         <div className="grid grid-cols-2 gap-10 sm:grid-cols-3">
           {/* Projects */}
           <div>
-            <div className="text-xs uppercase tracking-[0.22em] text-gold mb-5">Projects</div>
+            <div className="text-xs uppercase tracking-[0.22em] mb-5" style={{ color: "var(--brand-blue)" }}>Projects</div>
             <ul className="flex flex-col gap-3">
               {projects.map((p) => (
                 <li key={p.slug}>
@@ -104,7 +104,7 @@ export function Footer() {
 
           {/* Company */}
           <div>
-            <div className="text-xs uppercase tracking-[0.22em] text-gold mb-5">Company</div>
+            <div className="text-xs uppercase tracking-[0.22em] mb-5" style={{ color: "var(--brand-blue)" }}>Company</div>
             <ul className="flex flex-col gap-3">
               {companyLinks.map((l) => (
                 <li key={l.label}>
@@ -118,7 +118,7 @@ export function Footer() {
 
           {/* Resources */}
           <div>
-            <div className="text-xs uppercase tracking-[0.22em] text-gold mb-5">Resources</div>
+            <div className="text-xs uppercase tracking-[0.22em] mb-5" style={{ color: "var(--brand-blue)" }}>Resources</div>
             <ul className="flex flex-col gap-3">
               {resourceLinks.map((l) => (
                 <li key={l.label}>
@@ -133,7 +133,7 @@ export function Footer() {
 
         {/* Newsletter */}
         <div>
-          <div className="text-xs uppercase tracking-[0.22em] text-gold mb-5">Newsletter</div>
+          <div className="text-xs uppercase tracking-[0.22em] mb-5" style={{ color: "var(--brand-blue)" }}>Newsletter</div>
           <p className="text-sm text-muted-foreground">
             Receive curated property launches and investment insights.
           </p>
@@ -149,7 +149,7 @@ export function Footer() {
             />
             <button
               type="submit"
-              className="flex h-10 w-10 items-center justify-center rounded-full bg-gradient-gold text-primary-foreground"
+              className="flex h-10 w-10 items-center justify-center rounded-full bg-gradient-blue text-primary-foreground"
               aria-label="Subscribe"
             >
               <Send className="h-4 w-4" />
@@ -172,9 +172,9 @@ export function Footer() {
         <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-3 px-6 py-6 text-xs text-muted-foreground sm:flex-row lg:px-10">
           <div>© {new Date().getFullYear()} DhruvIconic Pvt. Ltd. All rights reserved.</div>
           <div className="flex items-center gap-6">
-            <a href="#" className="hover:text-gold">Privacy</a>
-            <a href="#" className="hover:text-gold">Terms</a>
-            <a href="#" className="hover:text-gold">RERA</a>
+            <a href="#" className="hover:text-primary">Privacy</a>
+            <a href="#" className="hover:text-primary">Terms</a>
+            <a href="#" className="hover:text-primary">RERA</a>
           </div>
         </div>
       </div>

@@ -58,9 +58,9 @@ export function Contact() {
               <a
                 href="tel:+919297882030"
                 id="contact-call"
-                className="group flex items-center gap-4 rounded-2xl border border-border/40 bg-card p-5 transition-all hover:border-gold"
+                className="group flex items-center gap-4 rounded-2xl border border-border/40 bg-card p-5 transition-all hover:border-primary"
               >
-                <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-gold text-primary-foreground">
+                <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-blue text-primary-foreground">
                   <Phone className="h-5 w-5" />
                 </span>
                 <div>
@@ -74,9 +74,9 @@ export function Contact() {
                 target="_blank"
                 rel="noreferrer"
                 id="contact-whatsapp"
-                className="group flex items-center gap-4 rounded-2xl border border-border/40 bg-card p-5 transition-all hover:border-gold"
+                className="group flex items-center gap-4 rounded-2xl border border-border/40 bg-card p-5 transition-all hover:border-primary"
               >
-                <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-gold text-primary-foreground">
+                <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-blue text-primary-foreground">
                   <MessageCircle className="h-5 w-5" />
                 </span>
                 <div>
@@ -90,7 +90,7 @@ export function Contact() {
                 id="contact-email"
                 className="group flex items-center gap-4 rounded-2xl border border-border/40 bg-card p-5 transition-all hover:border-gold"
               >
-                <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-gold text-primary-foreground">
+                <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-blue text-primary-foreground">
                   <Mail className="h-5 w-5" />
                 </span>
                 <div>
@@ -131,7 +131,7 @@ export function Contact() {
             transition={{ duration: 0.7 }}
             className="relative rounded-3xl border border-border/40 bg-card p-8 shadow-elegant md:p-10"
           >
-            <div className="absolute -top-px left-10 right-10 h-px bg-gradient-to-r from-transparent via-gold to-transparent" />
+            <div className="absolute -top-px left-10 right-10 h-px bg-gradient-to-r from-transparent via-primary to-transparent" />
             <h3 className="font-display text-3xl text-foreground">Free Consultancy</h3>
             <p className="mt-2 text-sm text-muted-foreground">Tell us about your goals — we'll respond within 24 hours.</p>
 
@@ -153,13 +153,13 @@ export function Contact() {
 
               {error && <p className="text-sm text-destructive">{error}</p>}
               {status === "sent" && (
-                <p className="text-sm text-gold">Thank you — we'll be in touch shortly.</p>
+                <p className="text-sm text-primary">Thank you — we'll be in touch shortly.</p>
               )}
 
               <button
                 id="contact-submit"
                 disabled={status === "sending"}
-                className="group mt-2 inline-flex items-center justify-center gap-3 rounded-full bg-gradient-gold px-7 py-4 text-sm font-semibold text-primary-foreground shadow-gold transition-transform duration-300 hover:scale-[1.03] disabled:opacity-70"
+                className="group mt-2 inline-flex items-center justify-center gap-3 rounded-full bg-gradient-blue px-7 py-4 text-sm font-semibold text-primary-foreground shadow-elegant transition-transform duration-300 hover:scale-[1.03] disabled:opacity-70"
               >
                 {status === "sending" ? "Sending…" : "Submit Enquiry"}
                 <Send className="h-4 w-4 transition-transform group-hover:translate-x-1" />
@@ -182,7 +182,7 @@ function Field({
         name={name}
         type={type}
         placeholder={placeholder}
-        className="mt-2 w-full rounded-xl border border-border/60 bg-background/60 px-4 py-3 text-sm text-foreground placeholder:text-foreground/35 focus:border-gold focus:outline-none focus:ring-2 focus:ring-gold/30"
+        className="mt-2 w-full rounded-xl border border-border/60 bg-background/60 px-4 py-3 text-sm text-foreground placeholder:text-foreground/35 focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/30"
       />
     </div>
   );

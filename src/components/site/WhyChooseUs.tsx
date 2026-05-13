@@ -33,12 +33,12 @@ export function WhyChooseUs() {
               transition={{ duration: 0.6, delay: i * 0.06 }}
               className="group relative bg-card p-8 transition-colors duration-500 hover:bg-secondary/60"
             >
-              <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-gradient-gold text-primary-foreground shadow-gold transition-transform duration-500 group-hover:-rotate-6">
+              <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-gradient-blue text-primary-foreground shadow-elegant transition-transform duration-500 group-hover:-rotate-6">
                 <f.icon className="h-6 w-6" />
               </div>
               <h3 className="mt-6 font-display text-2xl text-foreground">{f.title}</h3>
               <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{f.text}</p>
-              <div className="mt-6 h-px w-12 bg-gold transition-all duration-500 group-hover:w-24" />
+              <div className="mt-6 h-px w-12 bg-primary transition-all duration-500 group-hover:w-24" />
             </motion.div>
           ))}
         </div>

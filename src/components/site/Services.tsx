@@ -32,10 +32,10 @@ export function Services() {
                 className="group relative flex flex-col gap-4 rounded-2xl border border-border/40 bg-card p-6 hover-lift"
               >
                 <div className="flex items-center justify-between">
-                  <div className="flex h-12 w-12 items-center justify-center rounded-xl border border-border/60 text-gold transition-colors group-hover:bg-gradient-gold group-hover:text-primary-foreground group-hover:border-transparent">
+                  <div className="flex h-12 w-12 items-center justify-center rounded-xl border border-border/60 text-primary transition-colors group-hover:bg-gradient-blue group-hover:text-primary-foreground group-hover:border-transparent">
                     <s.icon className="h-5 w-5" />
                   </div>
-                  <ArrowUpRight className="h-5 w-5 text-foreground/40 transition-all duration-500 group-hover:rotate-45 group-hover:text-gold" />
+                  <ArrowUpRight className="h-5 w-5 text-foreground/40 transition-all duration-500 group-hover:rotate-45 group-hover:text-primary" />
                 </div>
                 <h3 className="font-display text-2xl text-foreground">{s.title}</h3>
                 <p className="text-sm leading-relaxed text-muted-foreground">{s.text}</p>

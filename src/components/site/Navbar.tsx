@@ -55,13 +55,13 @@ export function Navbar() {
         <div className="hidden items-center gap-3 lg:flex">
           <a
             href="tel:+919297882030"
-            className="flex items-center gap-2 text-sm text-foreground/80 hover:text-gold transition-colors"
+            className="flex items-center gap-2 text-sm text-foreground/80 hover:text-primary transition-colors"
           >
             <Phone className="h-4 w-4" /> +91 92978 82030
           </a>
           <a
             href="/#contact"
-            className="rounded-full bg-gradient-gold px-5 py-2.5 text-sm font-semibold text-primary-foreground shadow-gold transition-transform duration-300 hover:scale-[1.04]"
+            className="rounded-full bg-gradient-blue px-5 py-2.5 text-sm font-semibold text-primary-foreground shadow-elegant transition-transform duration-300 hover:scale-[1.04]"
           >
             Book Site Visit
           </a>
@@ -101,7 +101,7 @@ export function Navbar() {
                 <a
                   href="/#contact"
                   onClick={() => setOpen(false)}
-                  className="block rounded-full bg-gradient-gold px-5 py-3 text-center text-sm font-semibold text-primary-foreground shadow-gold"
+                  className="block rounded-full bg-gradient-blue px-5 py-3 text-center text-sm font-semibold text-primary-foreground shadow-elegant"
                 >
                   Book Site Visit
                 </a>

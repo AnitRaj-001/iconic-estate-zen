@@ -22,7 +22,7 @@ export function Hero() {
           className="h-full w-full object-cover scale-[1.05]"
         />
         <div className="absolute inset-0 bg-gradient-hero" />
-        <div className="absolute inset-0 bg-[radial-gradient(60%_50%_at_50%_40%,transparent_0%,oklch(0.05_0.005_60/0.65)_100%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(60%_50%_at_50%_40%,transparent_0%,oklch(0.99_0.005_60/0.4)_100%)]" />
       </div>
 
       {/* Content */}
@@ -44,7 +44,7 @@ export function Hero() {
           className="mt-6 max-w-4xl font-display text-5xl leading-[1.05] text-foreground sm:text-6xl md:text-7xl lg:text-[88px]"
         >
           Where dreams<br />
-          <span className="italic text-gradient-gold">meet</span> opportunity.
+          <span className="italic text-gradient-blue">meet</span> opportunity.
         </motion.h1>
 
         <motion.p
@@ -65,7 +65,7 @@ export function Hero() {
         >
           <a
             href="#projects"
-            className="group inline-flex items-center gap-3 rounded-full bg-gradient-gold px-7 py-4 text-sm font-semibold text-primary-foreground shadow-gold transition-transform duration-300 hover:scale-[1.04]"
+            className="group inline-flex items-center gap-3 rounded-full bg-gradient-blue px-7 py-4 text-sm font-semibold text-primary-foreground shadow-elegant transition-transform duration-300 hover:scale-[1.04]"
           >
             Explore Projects
             <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />

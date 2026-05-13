@@ -54,8 +54,8 @@ export function Gallery() {
                 onClick={() => setActive(f)}
                 className={`rounded-full border px-5 py-2 text-xs uppercase tracking-[0.18em] transition-all duration-300 ${
                   active === f
-                    ? "border-gold bg-gradient-gold text-primary-foreground"
-                    : "border-border/60 text-foreground/70 hover:border-gold hover:text-gold"
+                    ? "border-primary bg-gradient-blue text-primary-foreground"
+                    : "border-border/60 text-foreground/70 hover:border-primary hover:text-primary"
                 }`}
               >
                 {f}
@@ -83,9 +83,9 @@ export function Gallery() {
                   loading="lazy"
                   className="h-full w-full object-cover transition-transform duration-[1.2s] ease-out group-hover:scale-110"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-ink/90 via-ink/10 to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+                <div className="absolute inset-0 bg-gradient-to-t from-white/95 via-white/20 to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
                 <div className="absolute bottom-0 left-0 right-0 translate-y-3 p-4 opacity-0 transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100">
-                  <div className="text-[10px] uppercase tracking-[0.22em] text-gold">{it.category}</div>
+                  <div className="text-[10px] uppercase tracking-[0.22em]" style={{ color: "var(--brand-blue)" }}>{it.category}</div>
                   <div className="mt-1 text-sm font-medium text-foreground line-clamp-1">{it.alt}</div>
                 </div>
               </motion.button>
@@ -107,7 +107,7 @@ export function Gallery() {
             <button
               aria-label="Close"
               onClick={() => setOpen(null)}
-              className="absolute right-6 top-6 flex h-11 w-11 items-center justify-center rounded-full glass text-foreground hover:text-gold"
+              className="absolute right-6 top-6 flex h-11 w-11 items-center justify-center rounded-full glass text-foreground hover:text-primary"
             >
               <X className="h-5 w-5" />
             </button>

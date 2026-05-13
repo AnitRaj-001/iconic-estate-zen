@@ -45,7 +45,7 @@ export function Testimonials() {
         />
 
         <div className="relative mx-auto mt-16 max-w-4xl">
-          <Quote className="mx-auto h-12 w-12 text-gold opacity-70" />
+          <Quote className="mx-auto h-12 w-12 text-primary opacity-70" />
           <AnimatePresence mode="wait">
             <motion.blockquote
               key={i}
@@ -60,7 +60,7 @@ export function Testimonials() {
               </p>
               <div className="mt-8 flex items-center justify-center gap-1">
                 {Array.from({ length: 5 }).map((_, k) => (
-                  <Star key={k} className="h-4 w-4 fill-gold text-gold" />
+                  <Star key={k} className="h-4 w-4 fill-primary text-primary" />
                 ))}
               </div>
               <div className="mt-4">
@@ -76,7 +76,7 @@ export function Testimonials() {
             <button
               onClick={prev}
               aria-label="Previous"
-              className="flex h-11 w-11 items-center justify-center rounded-full border border-border/60 text-foreground/80 transition-all hover:border-gold hover:text-gold"
+              className="flex h-11 w-11 items-center justify-center rounded-full border border-border/60 text-foreground/80 transition-all hover:border-primary hover:text-primary"
             >
               <ChevronLeft className="h-4 w-4" />
             </button>
@@ -86,7 +86,7 @@ export function Testimonials() {
                   key={k}
                   onClick={() => setI(k)}
                   className={`h-1.5 rounded-full transition-all duration-500 ${
-                    k === i ? "w-10 bg-gold" : "w-4 bg-border"
+                    k === i ? "w-10 bg-primary" : "w-4 bg-border"
                   }`}
                   aria-label={`Go to testimonial ${k + 1}`}
                 />
@@ -95,7 +95,7 @@ export function Testimonials() {
             <button
               onClick={next}
               aria-label="Next"
-              className="flex h-11 w-11 items-center justify-center rounded-full border border-border/60 text-foreground/80 transition-all hover:border-gold hover:text-gold"
+              className="flex h-11 w-11 items-center justify-center rounded-full border border-border/60 text-foreground/80 transition-all hover:border-primary hover:text-primary"
             >
               <ChevronRight className="h-4 w-4" />
             </button>
